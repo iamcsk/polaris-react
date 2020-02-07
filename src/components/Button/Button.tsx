@@ -2,7 +2,10 @@ import React, {useRef, useState, useCallback} from 'react';
 import {CaretDownMinor} from '@shopify/polaris-icons';
 
 import {classNames, variationName} from '../../utilities/css';
-import {handleMouseUpByBlurring} from '../../utilities/focus';
+import {
+  handleMouseUpByBlurring,
+  handleMouseLeaveByBlurring,
+} from '../../utilities/focus';
 import {useFeatures} from '../../utilities/features';
 import {useI18n} from '../../utilities/i18n';
 import {UnstyledLink} from '../UnstyledLink';
@@ -305,6 +308,7 @@ export function Button({
         onBlur={onBlur}
         onMouseUp={handleMouseUpByBlurring}
         onMouseEnter={onMouseEnter}
+        onMouseLeave={handleMouseLeaveByBlurring}
         onTouchStart={onTouchStart}
         className={className}
         aria-label={accessibilityLabel}
@@ -325,6 +329,7 @@ export function Button({
         onKeyPress={onKeyPress}
         onMouseUp={handleMouseUpByBlurring}
         onMouseEnter={onMouseEnter}
+        onMouseLeave={handleMouseLeaveByBlurring}
         onTouchStart={onTouchStart}
         className={className}
         disabled={isDisabled}

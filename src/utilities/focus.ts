@@ -12,6 +12,12 @@ export function handleMouseUpByBlurring({
   currentTarget.blur();
 }
 
+export function handleMouseLeaveByBlurring({
+  currentTarget,
+}: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) {
+  currentTarget.blur();
+}
+
 export function nextFocusableNode(
   node: HTMLElement,
   filter?: Filter,
