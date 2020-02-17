@@ -19,14 +19,16 @@
   padding: $vertical-padding spacing();
   background: linear-gradient(
     to bottom,
-    color('white'),
-    color('sky', 'lighter')
+    color('bluesky'),
+    color('bluesky', 'base')
   );
-  border: border(dark);
+  // border: border(dark);
+  border: none;
+  color: color('ink');
   box-shadow: shadow(faint);
   border-radius: border-radius();
   line-height: 1;
-  color: color('ink');
+  color: color('blue', 'light');
   text-align: center;
   cursor: pointer;
   user-select: none;
@@ -39,8 +41,8 @@
   &:hover {
     background: linear-gradient(
       to bottom,
-      color('sky', 'lighter'),
-      color('sky', 'light')
+      color('bluesky'),
+      color('bluesky', 'base')
     );
     border-color: color('sky', 'dark');
   }
@@ -57,8 +59,8 @@
     // Same color gradient is necessary for background transitions
     background: linear-gradient(
       to bottom,
-      color('sky', 'light'),
-      color('sky', 'light')
+      color('bluesky'),
+      color('bluesky', 'base')
     );
     border-color: color('sky', 'dark');
     box-shadow: 0 0 0 0 transparent,
@@ -111,6 +113,7 @@
     color('sky', 'light'),
     color('sky', 'light')
   );
+  opacity: 0.4; /* kohia changes */
   color: color('ink', 'lightest');
 
   &.newDesignLanguage {
@@ -125,8 +128,8 @@
   $active-color: darken($button-color, 15%);
   background: linear-gradient(
     to bottom,
-    lighten($button-color, 2%),
-    darken($button-color, 2%)
+    lighten($button-color, 0%),
+    lighten($button-color, 0%)
   );
   border-color: $border-color;
   box-shadow: inset 0 1px 0 0 lighten($button-color, 3%), shadow(faint),

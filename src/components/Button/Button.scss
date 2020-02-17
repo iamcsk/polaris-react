@@ -187,7 +187,7 @@ $stacking-order: (
   --p-button-text: var(--p-text-on-primary);
   --p-button-color-hover: var(--p-action-primary-hovered);
   --p-button-color-active: var(--p-action-primary-pressed);
-  @include button-filled(color('indigo'), color('indigo', 'dark'));
+  @include button-filled(color('blue', 'light'), color('blue', 'dark'));
   @include recolor-icon(color('white'));
 
   &.newDesignLanguage {
